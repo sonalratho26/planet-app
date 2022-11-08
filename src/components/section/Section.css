@@ -1,0 +1,15 @@
+.text{
+    color:white ;
+}
+.remote{
+    font-size: 10px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #0035a2;
+    background-color: #d4dffa;
+    font-weight: 700;
+    margin-left: 10px;
+    border-radius: 4px;
+}
