@@ -4,9 +4,16 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import img from '../../images/pngtree-color-travel-tourism-vacation-image_9654.jpg'
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 
-function Section1(props) {
-  const { post } = props;
+import './Section1.css';
+
+
+function Section1() {
+  
 
   return (
     <Paper
@@ -18,11 +25,11 @@ function Section1(props) {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: `url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Fbackground%2F20210711%2Foriginal%2Fpngtree-green-healthy-low-carbon-travel-banner-picture-image_1115465.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Ftravel&tbnid=hmOrOjCtgkWesM&vet=10CAEQMyjQAWoXChMI2PzZm9Se-wIVAAAAAB0AAAAAEAk..i&docid=_IKLOALI7UKZMM&w=1200&h=438&q=travel%20background%20hd&hl=en-GB&ved=0CAEQMyjQAWoXChMI2PzZm9Se-wIVAAAAAB0AAAAAEAk)`,
+        backgroundImage: `url(${img})`,
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {<img style={{ display: 'none' }} src={'https://source.unsplash.com/random'}  />}
+      {<img style={{ display: 'none' }} src={img}  />}
       <Box
         sx={{
           position: 'absolute',
@@ -33,8 +40,8 @@ function Section1(props) {
           backgroundColor: 'rgba(0,0,0,.3)',
         }}
       />
-      <Grid container>
-        <Grid item md={6}>
+      <Grid container rowSpacing={1} mt={1} spacing={12} columnSpacing={{ xs: 1, sm: 3, md: 3 }}>
+        <Grid item xs={6} sm={2} md={6} sx={{maxWidth:'100%'}}>
           <Box
             sx={{
               position: 'relative',
@@ -42,16 +49,27 @@ function Section1(props) {
               pr: { md: 0 },
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-       
+            <Typography component="h1" variant="h3" color="inherit" sx={{fontWeight:'700' , textAlign:'left'}} gutterBottom>
+            Become a Plannet 
+            Planner
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-            
-            </Typography>
-            <Link variant="subtitle1" href="#">
-              
-            </Link>
           </Box>
+        </Grid>
+        <Grid xs={6} sm={2} md={6} sx={{maxWidth:'100%'}}>
+        <Box
+            sx={{
+              position: 'relative',
+              p: { xs: 3, md: 6 },
+              pr: { md: 0 },
+            }}
+          >
+            <Fab variant="extended" size="medium" color="primary" aria-label="add" className='fab'>
+        
+        Learn More about Planners
+        <ExpandCircleDownIcon sx={{ ml: 1,transform: 'rotate(270deg)' }}/>
+      </Fab>
+          </Box>
+          
         </Grid>
       </Grid>
     </Paper>

@@ -12,6 +12,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import './Section.css'
 import Section1 from './Section1';
+import Footer from '../Footer/Footer';
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,21 +26,23 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Section() {
     return (
+<div>
 
-        <Box sx={{ width: '100%',
-        background: 'linear-gradient(180deg, rgb(0 0 0 / 30%) 0%, rgba(0,0,0,1) 35%)',
+<Box sx={{ flexGrow: 1, display: { xs: 'contents', md: 'none' } }}>
+<Box sx={{ width: '100%',
+        background: 'linear-gradient(180deg, rgb(3 3 3 / 80%) 0%, rgba(0,0,0,1) 35%)',
         position: 'absolute',
-        top: '350px' }} >
+        top: '200px' }} >
             <Container maxWidth="lg">
-            <Typography  variant="h3" className="text" paragraph >
+            <Typography  variant="h4" className="text" paragraph >
                             Travel the world with confidence</Typography>
                 <Grid container rowSpacing={1} spacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12}>
-                        <Typography variant="h4" className="text" paragraph sx={{ textAlign: 'left', ml: '10px',mt:'40px', fontWeight: '600' }}>Join Us</Typography>
+                        <Typography variant="h4" className="text" paragraph sx={{ textAlign: 'left', ml: '10px',mt:'10px', fontWeight: '600' }}>Join Us</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                        <Typography variant="body1" className="text" gutterBottom sx={{ textAlign: 'left', ml: '10px' }}>
-                            Please email hello@plannet.io with your resume and the postion you are interested in! We are excited for you to join us and help bulid our community on it's mission to see the world together.</Typography>
+                        <Typography variant="body1"  gutterBottom sx={{ textAlign: 'left', ml: '10px',color:' #797a7a',fontWeight:'600' }}>
+                            Please email <span style={{color:'white'}}>hello@plannet.io</span> with your resume and the postion you are interested in! We are excited for you to join us and help bulid our community on it's mission to see the world together.</Typography>
                     </Grid>
 
 
@@ -47,12 +51,12 @@ export default function Section() {
 
                 </Grid>
 
-                <Grid container rowSpacing={4} mt={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12}>
                         <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Enginerring</Typography>
                     </Grid>
                     {itemData.map((item) => (
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={6} >
                             <CardActionArea component="a" href="#">
                                 <Card sx={{ display: 'flex' }}>
                                     <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
@@ -72,12 +76,12 @@ export default function Section() {
 
 
                 </Grid>
-                <Grid container rowSpacing={4} mt={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12}>
                         <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Product</Typography>
                     </Grid>
                     {productData.map((item) => (
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={6}  >
                             <CardActionArea component="a" href="#">
                                 <Card sx={{ display: 'flex' }}>
                                     <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
@@ -97,12 +101,12 @@ export default function Section() {
 
 
                 </Grid>
-                <Grid container rowSpacing={4} mt={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={12}>
                         <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Marketing</Typography>
                     </Grid>
                     {marketData.map((item) => (
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={6}  >
                             <CardActionArea component="a" href="#">
                                 <Card sx={{ display: 'flex' }}>
                                     <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
@@ -124,13 +128,117 @@ export default function Section() {
 
                 </Grid>
                 
-                <Grid container rowSpacing={1} mt={1} spacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid item xs={12}>
                 <Section1/>
-                </Grid>
-                    </Grid>
+                    <Footer/>
             </Container>
         </Box>
+</Box>
+       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+<Box sx={{ width: '100%',
+        background: 'linear-gradient(180deg, rgb(3 3 3 / 80%) 0%, rgba(0,0,0,1) 35%)',
+        position: 'absolute',
+        top: '350px' }} >
+            <Container maxWidth="lg">
+            <Typography  variant="h3" className="text" paragraph >
+                            Travel the world with confidence</Typography>
+                <Grid container rowSpacing={1} spacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" className="text" paragraph sx={{ textAlign: 'left', ml: '10px',mt:'40px', fontWeight: '600' }}>Join Us</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography variant="body1"  gutterBottom sx={{ textAlign: 'left', ml: '10px',color:' #797a7a',fontWeight:'600' }}>
+                            Please email <span style={{color:'white'}}>hello@plannet.io</span> with your resume and the postion you are interested in! We are excited for you to join us and help bulid our community on it's mission to see the world together.</Typography>
+                    </Grid>
+
+
+
+
+
+                </Grid>
+
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Enginerring</Typography>
+                    </Grid>
+                    {itemData.map((item) => (
+                        <Grid item xs={6} sm={4} md={6} >
+                            <CardActionArea component="a" href="#">
+                                <Card sx={{ display: 'flex' }}>
+                                    <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
+                                        <Typography component="h2" variant="h5" sx={{ fontWeight: '600', color: 'black' }}>
+                                            {item.title}<span className='remote'>Remote</span>
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary" sx={{ fontWeight: '600' }}>
+                                            {item.address}
+                                        </Typography>
+                                    </CardContent>
+
+                                </Card>
+                            </CardActionArea>
+                        </Grid>
+                    ))}
+
+
+
+                </Grid>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Product</Typography>
+                    </Grid>
+                    {productData.map((item) => (
+                        <Grid item xs={6} sm={4} md={6}  >
+                            <CardActionArea component="a" href="#">
+                                <Card sx={{ display: 'flex' }}>
+                                    <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
+                                        <Typography component="h2" variant="h5" sx={{ fontWeight: '600', color: 'black' }}>
+                                            {item.title}<span className='remote'>Remote</span>
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary" sx={{ fontWeight: '600' }}>
+                                            {item.address}
+                                        </Typography>
+                                    </CardContent>
+
+                                </Card>
+                            </CardActionArea>
+                        </Grid>
+                    ))}
+
+
+
+                </Grid>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" className="text" sx={{ textAlign: 'left', ml: '10px', fontWeight: '600', mt: '15px' }}>Marketing</Typography>
+                    </Grid>
+                    {marketData.map((item) => (
+                        <Grid item xs={6} sm={4} md={6}  >
+                            <CardActionArea component="a" href="#">
+                                <Card sx={{ display: 'flex' }}>
+                                    <CardContent sx={{ flex: 1, textAlign: 'initial' }}>
+                                        <Typography component="h2" variant="h5" sx={{ fontWeight: '600', color: 'black' }}>
+                                            {item.title}
+                                            <span className='remote'>Remote</span>
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary" sx={{ fontWeight: '600' }}>
+                                            {item.address}
+                                        </Typography>
+                                    </CardContent>
+
+                                </Card>
+                            </CardActionArea>
+                        </Grid>
+                    ))}
+
+
+
+                </Grid>
+                
+                <Section1/>
+                    <Footer/>
+            </Container>
+        </Box>
+</Box>
+        </div>
     );
 }
 
