@@ -130,8 +130,7 @@ function Header() {
                       sx={{
                         marginLeft: "-34px",
                         color: "black !important",
-                        fontSize: "33px",
-                        marginTop: "5px"
+                        fontSize: "33px"
                       }}
                       {...props}
                     />
@@ -167,14 +166,14 @@ function Header() {
                       sx={{
                         marginLeft: "-34px",
                         color: "black !important",
-                        fontSize: "33px",
+                        fontSize: "33px"
                       }}
                       {...props}
                     />
                   )}
                 >
                   <MenuItem value="">
-                    <AttachMoneyIcon sx={{ fill: "black" }} />
+                    <AttachMoneyIcon sx={{ fill: "black",marginTop: '6px' }} />
                   </MenuItem>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>
