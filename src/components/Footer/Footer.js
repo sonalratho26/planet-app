@@ -123,13 +123,13 @@ function Footer() {
                                     }}
                                 >
                                     <img src={appstore} height={40}
-                                        width={140} />
+                                        width={144} />
                                 </Box>
                                 <Box
                                     component="div"
                                     sx={{
                                         display: 'inline',
-                                        padding: '8px',
+                                        padding: '6px',
                                         color: (theme) =>
                                             theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
 
@@ -139,7 +139,7 @@ function Footer() {
                                     }}
                                 >
                                     <img src={gogglestore} height={40}
-                                        width={144} />
+                                        width={141} />
                                 </Box>
 
                             </div>
@@ -209,7 +209,7 @@ function Footer() {
                                     fontWeight: '700',
                                 }}
                             >
-                                <Divider sx={{ borderColor: 'white', borderBottomWidth: 1, marginRight: '-40px ', marginLeft: '-80px ' }} />
+                                <Divider sx={{ borderColor: 'white', borderBottomWidth: 1, marginRight: '-32px ', marginLeft: '-80px ' }} />
                                 <CopyrightXs sx={{
                                     mt: 3, color: 'white',
                                     fontSize: '1rem',
