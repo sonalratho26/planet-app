@@ -2,7 +2,7 @@
     color:white ;
 }
 .remote{
-    font-size: 10px;
+    font-size: 1rem;
     padding-right: 4px;
     padding-left: 4px;
     padding-top: 3px;
@@ -11,5 +11,17 @@
     background-color: #d4dffa;
     font-weight: 700;
     margin-left: 10px;
+    border-radius: 4px;
+}
+.remote1{
+    font-size: 1rem;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: #0035a2;
+    background-color: #d4dffa;
+    font-weight: 700;
+    margin-left: 8px;
     border-radius: 4px;
 }

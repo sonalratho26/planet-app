@@ -36,12 +36,12 @@ function Copyright(props) {
 
 function CopyrightXs(props) {
     return (
-        <Typography variant="body1" color="text.secondary" align="center" {...props}>
+        <Typography variant="subtitle1" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
 
             {new Date().getFullYear()}
             {'.'}
-            <Link color="inherit" href="https://mui.com/" sx={{ textDecoration: 'none' }}>
+            <Link color="inherit" varinat="subtitle1" href="https://mui.com/" sx={{ textDecoration: 'none' }}>
                 All Rights Reserved By Plannet Technolgies Inc.
             </Link>{' '}
         </Typography>
@@ -77,7 +77,7 @@ function Footer() {
 
                     <Grid container spacing={4} >
 
-                        <Grid item xs={12}  >
+                        <Grid item xs={12} sm={12}  >
 
                             <Typography
                                 variant="h6"
@@ -96,23 +96,24 @@ function Footer() {
                                 plannet
                             </Typography>
 
+                        </Grid>
+                        <Grid item xs={12} sm={12}  >
+
                             <Typography variant="subtitle1" component="p" color="white" sx={{
-                               fontSize: '20px',
-    textAlign: 'initial',
-    marginLeft: '50px',
-                                marginTop: '-16px'
+                                fontSize: '1.5rem',
+                                marginTop: '-40px'
                             }}>
                                 Travel Starts Here.
                             </Typography>
 
                         </Grid>
                         <Grid item xs={12}  >
-                            <div style={{marginTop:'-20px'}}>
+                            <div style={{ marginTop: '-20px' }}>
                                 <Box
                                     component="div"
                                     sx={{
                                         display: 'inline',
-                                        p: 1,
+                                        padding: '3px',
                                         color: (theme) =>
                                             theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
 
@@ -121,14 +122,14 @@ function Footer() {
                                         fontWeight: '700',
                                     }}
                                 >
-                                    <img src={appstore} height={35}
-                                        width={100} />
+                                    <img src={appstore} height={40}
+                                        width={140} />
                                 </Box>
                                 <Box
                                     component="div"
                                     sx={{
                                         display: 'inline',
-                                        p: 1,
+                                        padding: '8px',
                                         color: (theme) =>
                                             theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
 
@@ -137,8 +138,8 @@ function Footer() {
                                         fontWeight: '700',
                                     }}
                                 >
-                                    <img src={gogglestore} height={35}
-                                        width={100} />
+                                    <img src={gogglestore} height={40}
+                                        width={144} />
                                 </Box>
 
                             </div>
@@ -163,7 +164,7 @@ function Footer() {
                             <Box
                                 component="div"
                                 sx={{
-
+                                    marginTop:'8px',
                                     color: (theme) =>
                                         theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
 
@@ -178,17 +179,16 @@ function Footer() {
                             </Box>
                         </Grid>
                         {footers.map((footer) => (
-                            <Grid item xs={12} key={footer.title} sx={{ textAlign: 'center', marginLeft:'22px'}}>
+                            <Grid item xs={12} key={footer.title} >
                                 <ul style={{
-                                    display: 'flex',
                                     flexWrap: 'wrap'
                                 }}>
                                     {footer.description.map((item) => (
                                         <li key={item} style={{
-                                            margin: '0 8px 4px 0',
+                                            margin: '0 10px 8px 0',
                                             display: 'inline-block'
                                         }}>
-                                            <Link href="#" variant="subtitle1" sx={{ color: 'white', textDecoration: 'none', fontSize: '12px' }}>
+                                            <Link href="#"  sx={{ color: 'white', textDecoration: 'none', fontSize: '0.985rem' }}>
                                                 {item}
                                             </Link>
                                         </li>
@@ -196,30 +196,29 @@ function Footer() {
                                 </ul>
                             </Grid>
                         ))}
-                       
-                        <Box
-                            component="div"
-                            sx={{
+                        <Grid item xs={12}  >
+                            <Box
+                                component="div"
+                                sx={{
 
-                                color: (theme) =>
-                                    theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-mt:2,
-                                borderRadius: 2,
-                                fontSize: '0.875rem',
-                                fontWeight: '700',
-                            }}
-                        >
-                         <Divider sx={{ borderColor:'white',borderBottomWidth: 1,marginRight: '-30px ', }}/>
-                            <CopyrightXs sx={{
-                                mt: 3, color: 'white',
-                                fontSize: '12px',
-                                marginLeft: '40px',
-                                fontWeight:'600'
-   
-   
-                            }} />
-                        </Box>
+                                    color: (theme) =>
+                                        theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                    mt: 2,
+                                    borderRadius: 2,
+                                    fontSize: '0.875rem',
+                                    fontWeight: '700',
+                                }}
+                            >
+                                <Divider sx={{ borderColor: 'white', borderBottomWidth: 1, marginRight: '-40px ', marginLeft: '-80px ' }} />
+                                <CopyrightXs sx={{
+                                    mt: 3, color: 'white',
+                                    fontSize: '1rem',
+                                    fontWeight: '600'
 
+
+                                }} />
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Box>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -237,7 +236,7 @@ mt:2,
                                     fontWeight: 700,
                                     color: 'white',
                                     textDecoration: 'none',
-                                    fontSize: '60px'
+                                    fontSize: '3.8rem'
 
                                 }}
                             >
@@ -245,9 +244,12 @@ mt:2,
                             </Typography>
 
                             <Typography variant="subtitle1" component="p" color="white" sx={{
-                                fontSize: '16px', textAlign: 'initial',
-                                marginLeft: '62px',
-                                marginTop: '-16px'
+                                fontSize: '1.2rem',
+                        
+                                marginTop: '-16px',
+                               
+    marginRight: '50px'
+
                             }}>
                                 Travel Starts Here.
                             </Typography>
@@ -265,8 +267,7 @@ mt:2,
                             >
                                 <Copyright sx={{
                                     mt: 5, color: 'white',
-                                    fontSize: '14px',
-                                    marginLeft: '54px'
+                                    fontSize: '0.7rem'
                                 }} />
                             </Box>
                         </Grid>
@@ -301,13 +302,13 @@ mt:2,
                                     }}
                                 >
                                     <img src={appstore} height={40}
-                                        width={120} />
+                                        width={140} />
                                 </Box>
                                 <Box
                                     component="div"
                                     sx={{
                                         display: 'inline',
-                                        p: 1,
+                                        p: '6px',
                                         color: (theme) =>
                                             theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
 
@@ -317,7 +318,7 @@ mt:2,
                                     }}
                                 >
                                     <img src={gogglestore} height={40}
-                                        width={120} />
+                                        width={145} />
                                 </Box>
 
                             </div>

@@ -12,4 +12,9 @@
     border-radius: 30px !important;
     margin-top: 10px;
     border: white;
+
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    padding-left: 10px !important;
+    padding-bottom: 10px !important;
 }

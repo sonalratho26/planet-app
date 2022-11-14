@@ -21,166 +21,281 @@ function Banner(props) {
         };
     }
     return (
+        <div>
+            <Paper
+                sx={{
+                    position: 'relative',
+                    color: '#fff',
+                    mb: 4,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundColor: '#0e8049',
 
-        <Paper
-            sx={{
-                position: 'relative',
-                color: '#fff',
-                mb: 4,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                backgroundColor: '#0e8049',
-                // marginTop:'10px'
-            }}
-        >
-            {/* <Container maxWidth="lg"> */}
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {/* Increase the priority of the hero background image */}
-                {/* {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />} */}
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: 0,
-                        bottom: 0,
-                        right: 0,
-                        left: 0,
-                        backgroundColor: '#0e8049',
-                    }}
-                />
+                    display: { xs: 'none', md: 'flex' }
+                }}
+            >
 
-                <Grid sx={{ flexGrow: 1 }} container spacing={2}>
-                    <Grid item xs={12} >
 
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                pr: { md: 0 },
-                            }}
-                        >
-                            <div role="presentation" style={{ paddingLeft: '25px' }} >
-                                <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
-                                    <Link underline="hover" color="inherit" href="/">
-                                        Home
-                                    </Link>
-                                    <Link
-                                        underline="hover"
-                                        color="inherit"
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
-                                    >
-                                        Careers
-                                    </Link>
-                                </Breadcrumbs>
-                            </div>
-                            <ImageList
-                                variant="quilted"
-                                cols={5}
-                                gap={8}
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            bottom: 0,
+                            right: 0,
+                            left: 0,
+                            backgroundColor: '#0e8049',
+                        }}
+                    />
+
+                    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+                        <Grid item xs={12} >
+
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    pr: { md: 0 },
+                                }}
                             >
-                                {itemData.map((item) => (
-                                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
-                                        <img
-                                            {...srcset(item.img, 121, item.rows, item.cols)}
-                                            alt={item.title}
-                                            loading="lazy"
-                                            style={{ borderRadius: '10px' }}
+                                <div role="presentation" style={{ paddingLeft: '25px' }} >
+
+                                    <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
+                                        <Link underline="hover" color="inherit" href="/">
+                                            Home
+                                        </Link>
+                                        <Link
+                                            underline="hover"
+                                            color="inherit"
+
+                                        >
+                                            Careers
+                                        </Link>
+                                    </Breadcrumbs>
+                                </div>
+                                <div className='listbox'>
+                                    <div className='li_list'>
+                                        <ImageList
+                                            variant="quilted"
+                                            cols={5}
+                                            gap={8}
+                                        >
+                                            {itemData.map((item) => (
+                                                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
+                                                    <img
+                                                        {...srcset(item.img, 121, item.rows, item.cols)}
+                                                        alt={item.title}
+                                                        loading="lazy"
+                                                        style={{ borderRadius: '10px' }}
+                                                    />
+                                                </ImageListItem>
+                                            ))}
+                                        </ImageList>
+                                    </div>
+
+                                    <Box sx={{
+                                        width: '100%',
+                                        zIndex: 1,
+                                        position: 'absolute',
+                                        top: '283px'
+                                    }} >
+                                        <Box
+                                            sx={{
+                                                position: 'absolute',
+                                                top: 0,
+                                                bottom: 0,
+                                                right: 0,
+                                                left: 0,
+                                            }}
                                         />
-                                    </ImageListItem>
-                                ))}
-                            </ImageList>
+                                        <Box
+                                            sx={{
+                                                position: 'relative',
+                                            }}
+                                        >
+                                            <Typography variant="h2" className="text" paragraph sx={{ fontWeight: '600' }}>
+                                                Travel the world with confidence</Typography>
+                                        </Box>
 
-                            {/* <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                           Travel the world with confidence
-                        </Typography>
-                        <Typography variant="h5" color="inherit" paragraph>
-                        
-                        </Typography>
-                        <Link variant="subtitle1" href="#">
-                           
-                        </Link> */}
-
-                        </Box>
+                                    </Box>
+                                </div>
 
 
+                            </Box>
+
+
+                        </Grid>
                     </Grid>
-                </Grid>
                 </Box>
+            </Paper>
+            <Paper
+                sx={{
+                    position: 'relative',
+                    color: '#fff',
+                    mb: 4,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundColor: '#0e8049',
+                    marginTop: '10px',
+                }}
+            >
+                <Box sx={{ flexGrow: 1, display: { xs: 'contents', md: 'none' } }}>
+                    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+                        <Grid item xs={12} >
 
-
-                <Box sx={{ flexGrow: 1, display: { xs: 'contents', md: 'none' }}}>
-                <Grid sx={{ flexGrow: 1 }} container spacing={2}>
-                    <Grid item xs={12} >
-
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                pr: { md: 0 },
-                            }}
-                        >
-                            <div role="presentation" style={{ paddingLeft: '20px' }} >
-                                <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
-                                    <Link underline="hover" color="inherit" href="/">
-                                        Home
-                                    </Link>
-                                    <Link
-                                        underline="hover"
-                                        color="inherit"
-
-                                    >
-                                        Careers
-                                    </Link>
-                                </Breadcrumbs>
-                            </div>
-                            {/* <ImageList
-                                variant="quilted"
-                                cols={5}
-                                gap={8}
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    pr: { md: 0 },
+                                }}
                             >
-                                {itemData.map((item) => (
-                                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
-                                        <img
-                                            {...srcset(item.img, 121, item.rows, item.cols)}
-                                            alt={item.title}
-                                            loading="lazy"
-                                            style={{ borderRadius: '10px' }}
-                                        />
-                                    </ImageListItem>
-                                ))}
-                            </ImageList> */}
+                                <div role="presentation" style={{ paddingLeft: '20px' }} >
+                                    <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
+                                        <Link underline="hover" color="inherit" href="/">
+                                            Home
+                                        </Link>
+                                        <Link
+                                            underline="hover"
+                                            color="inherit"
 
-                            {/* <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                           Travel the world with confidence
-                        </Typography>
-                        <Typography variant="h5" color="inherit" paragraph>
-                        
-                        </Typography>
-                        <Link variant="subtitle1" href="#">
-                           
-                        </Link> */}
-                        <ImageList
-                                variant="quilted"
-                                cols={5}
-                                gap={4}
-                            >
-                                {itemDataXs.map((item) => (
-                                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
-                                        <img
-                                            {...srcset(item.img, 121, item.rows, item.cols)}
-                                            alt={item.title}
-                                            loading="lazy"
-                                            style={{ borderRadius: '10px' }}
-                                        />
-                                    </ImageListItem>
-                                ))}
-                            </ImageList>
-                        </Box>
+                                        >
+                                            Careers
+                                        </Link>
+                                    </Breadcrumbs>
+                                </div>
+
+                                <div className='listbox2'>
+                                    <div className='li_list'>
+                                        <ImageList
+                                            variant="quilted"
+                                            cols={4}
+                                            gap={4}
+                                        >
+                                            {itemDataXs.map((item) => (
+                                                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
+                                                    <img
+                                                        {...srcset(item.img, 121, item.rows, item.cols)}
+                                                        alt={item.title}
+                                                        loading="lazy"
+                                                        style={{ borderRadius: '10px' }}
+                                                    />
+                                                </ImageListItem>
+                                            ))}
+                                        </ImageList>
+                                    </div>
+                                    <Box sx={{
+                                        width: '100%',
+                                        zIndex: 1,
+                                        position: 'absolute',
+                                        top: '310px'
+                                    }} >
+                                        <Box
+                                            sx={{
+                                                position: 'relative',
+                                            }}
+                                        >
+                                            <Typography variant="h3" className="text" paragraph sx={{ fontWeight: '600',fontSize: '2.5rem '}}>
+                                                Travel the world with confidence</Typography>
+                                        </Box>
+
+                                    </Box>
+                                </div>
+
+                            </Box>
 
 
+                        </Grid>
                     </Grid>
-                </Grid>
                 </Box>
-            {/* </Container> */}
-        </Paper>
+            </Paper>
+            <Paper
+                sx={{
+                    position: 'relative',
+                    color: '#fff',
+                    mb: 4,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundColor: '#0e8049',
+                    borderRadius: '0px',
+                    display: { md: 'none', sm: 'flex', xs: 'none' }
+                }}
+            >
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', } }}>
+                    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+                        <Grid item xs={12} >
+
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    pr: { md: 0 },
+                                }}
+                            >
+                                <div role="presentation" style={{ paddingLeft: '20px' }} >
+                                    <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
+                                        <Link underline="hover" color="inherit" href="/">
+                                            Home
+                                        </Link>
+                                        <Link
+                                            underline="hover"
+                                            color="inherit"
+
+                                        >
+                                            Careers
+                                        </Link>
+                                    </Breadcrumbs>
+                                </div>
+
+                                <div className='listbox3'>
+                                    <div className='li_list'>
+                                        <ImageList
+                                            variant="quilted"
+                                            cols={4}
+                                            gap={4}
+                                        >
+                                            {itemDataXs.map((item) => (
+                                                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
+                                                    <img
+                                                        {...srcset(item.img, 121, item.rows, item.cols)}
+                                                        alt={item.title}
+                                                        loading="lazy"
+                                                        style={{ borderRadius: '10px' }}
+                                                    />
+                                                </ImageListItem>
+                                            ))}
+                                        </ImageList>
+                                    </div>
+                                    <Box sx={{
+                                        width: '100%',
+                                        zIndex: 1,
+                                        position: 'absolute',
+                                        top: '250px'
+                                    }} >
+
+                                        <Box
+                                            sx={{
+                                                position: 'relative',
+                                            }}
+                                        >
+                                            <Typography variant="h4" className="text" paragraph sx={{ fontWeight: '700' }}>
+                                                Travel the world with confidence</Typography>
+                                        </Box>
+
+                                    </Box>
+                                </div>
+
+                            </Box>
+
+
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Paper>
+
+
+        </div>
     );
 }
 
@@ -256,7 +371,7 @@ const itemDataXs = [
     {
         img: 'https://images.unsplash.com/photo-1498036882173-b41c28a8ba34',
         title: 'Coffee',
-
+        rows: 2
     },
     {
         img: 'https://images.unsplash.com/photo-1511091734515-e50d46c37240',
@@ -288,27 +403,27 @@ const itemDataXs = [
         title: 'Tomato basil',
     },
     {
-      img: 'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f',
-      title: 'Sea star',
+        img: 'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f',
+        title: 'Sea star',
     },
     {
-      img: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59',
-      title: 'Bike',
+        img: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59',
+        title: 'Bike',
 
     },
     {
-      img: 'https://images.unsplash.com/photo-1534113414509-0eec2bfb493f',
-      title: 'Bike',
-  
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad',
-      title: 'Bike',
+        img: 'https://images.unsplash.com/photo-1534113414509-0eec2bfb493f',
+        title: 'Bike',
 
     },
-    // {
-    //   img: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24',
-    //   title: 'Bike',
-      
-    // }
+    {
+        img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad',
+        title: 'Bike',
+
+    },
+    {
+        img: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24',
+        title: 'Bike',
+
+    }
 ];
