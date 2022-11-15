@@ -1,4 +1,4 @@
-.text{
+.text2{
     color:white ;
 }
 .remote{
@@ -25,3 +25,18 @@
     margin-left: 8px;
     border-radius: 4px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .text2 {
+      font-size: 1.9rem !important;
+      text-align: left !important;
+      margin-left: 0 !important;
+    }
+    .title2{
+        font-size: 1.3rem !important;
+    }
+    .address{
+        margin-top: 10px !important;
+    }
+  }

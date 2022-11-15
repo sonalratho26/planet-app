@@ -137,7 +137,7 @@ function Header() {
                   )}
                 >
                   <MenuItem value="">
-                    <AttachMoneyIcon sx={{ fill: "black",marginTop: '6px' }} />
+                    <AttachMoneyIcon sx={{ fill: "black"}} />
                   </MenuItem>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>
@@ -173,7 +173,7 @@ function Header() {
                   )}
                 >
                   <MenuItem value="">
-                    <AttachMoneyIcon sx={{ fill: "black",marginTop: '6px' }} />
+                    <AttachMoneyIcon sx={{ fill: "black" }} />
                   </MenuItem>
                   <MenuItem value={10}>Ten</MenuItem>
                   <MenuItem value={20}>Twenty</MenuItem>

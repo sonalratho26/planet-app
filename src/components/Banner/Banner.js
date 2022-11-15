@@ -9,10 +9,8 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import './Banner.css';
-import Container from '@mui/material/Container';
 
-function Banner(props) {
-    const { post } = props;
+function Banner() {
     function srcset(image, size, rows = 1, cols = 1) {
         return {
             src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -35,8 +33,6 @@ function Banner(props) {
                     display: { xs: 'none', md: 'flex' }
                 }}
             >
-
-
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
                     <Box
@@ -210,89 +206,7 @@ function Banner(props) {
                     </Grid>
                 </Box>
             </Paper>
-            <Paper
-                sx={{
-                    position: 'relative',
-                    color: '#fff',
-                    mb: 4,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    backgroundColor: '#0e8049',
-                    borderRadius: '0px',
-                    display: { md: 'none', sm: 'flex', xs: 'none' }
-                }}
-            >
-                <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', } }}>
-                    <Grid sx={{ flexGrow: 1 }} container spacing={2}>
-                        <Grid item xs={12} >
-
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    pr: { md: 0 },
-                                }}
-                            >
-                                <div role="presentation" style={{ paddingLeft: '20px' }} >
-                                    <Breadcrumbs aria-label="breadcrumb" sx={{ color: 'white' }}>
-                                        <Link underline="hover" color="inherit" href="/">
-                                            Home
-                                        </Link>
-                                        <Link
-                                            underline="hover"
-                                            color="inherit"
-
-                                        >
-                                            Careers
-                                        </Link>
-                                    </Breadcrumbs>
-                                </div>
-
-                                <div className='listbox3'>
-                                    <div className='li_list'>
-                                        <ImageList
-                                            variant="quilted"
-                                            cols={4}
-                                            gap={4}
-                                        >
-                                            {itemDataXs.map((item) => (
-                                                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} >
-                                                    <img
-                                                        {...srcset(item.img, 121, item.rows, item.cols)}
-                                                        alt={item.title}
-                                                        loading="lazy"
-                                                        style={{ borderRadius: '10px' }}
-                                                    />
-                                                </ImageListItem>
-                                            ))}
-                                        </ImageList>
-                                    </div>
-                                    <Box sx={{
-                                        width: '100%',
-                                        zIndex: 1,
-                                        position: 'absolute',
-                                        top: '250px'
-                                    }} >
-
-                                        <Box
-                                            sx={{
-                                                position: 'relative',
-                                            }}
-                                        >
-                                            <Typography variant="h4" className="text" paragraph sx={{ fontWeight: '700' }}>
-                                                Travel the world with confidence</Typography>
-                                        </Box>
-
-                                    </Box>
-                                </div>
-
-                            </Box>
-
-
-                        </Grid>
-                    </Grid>
-                </Box>
-            </Paper>
+           
 
 
         </div>

@@ -27,7 +27,7 @@ function Copyright(props) {
 
             {new Date().getFullYear()}
             {'.'}
-            <Link color="inherit" href="https://mui.com/" sx={{ textDecoration: 'none' }}>
+            <Link color="inherit" href="#" sx={{ textDecoration: 'none' }}>
                 Plannet Technolgies Inc.
             </Link>{' '}
         </Typography>
@@ -41,7 +41,7 @@ function CopyrightXs(props) {
 
             {new Date().getFullYear()}
             {'.'}
-            <Link color="inherit" varinat="subtitle1" href="https://mui.com/" sx={{ textDecoration: 'none' }}>
+            <Link color="inherit" varinat="subtitle1" href="#" sx={{ textDecoration: 'none' }}>
                 All Rights Reserved By Plannet Technolgies Inc.
             </Link>{' '}
         </Typography>
@@ -51,9 +51,7 @@ function CopyrightXs(props) {
 
 
 const footers = [
-
     {
-
         description: ['FAQ', 'Contact', ' Terms of Service', 'Careers', ' Planner Reference Sheet', 'Privacy Policy'],
     }
 ];
@@ -61,29 +59,21 @@ const footers = [
 function Footer() {
     return (
         <React.Fragment>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+        <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
             <CssBaseline />
-
-            {/* Footer */}
             <Container
                 component="footer"
                 sx={{
-
-
                     py: [3, 6],
                 }}
             >
                 <Box sx={{ flexGrow: 1, display: { xs: 'contents', md: 'none' } }}>
-
                     <Grid container spacing={4} >
-
                         <Grid item xs={12} sm={12}  >
-
                             <Typography
                                 variant="h6"
                                 noWrap
                                 component="a"
-
                                 sx={{
                                     fontFamily: 'sans-serif',
                                     fontWeight: 700,
@@ -361,9 +351,8 @@ function Footer() {
                     </Grid>
                 </Box>
 
-                {/* <Copyright sx={{ mt: 5 }} /> */}
             </Container>
-            {/* End footer */}
+      
         </React.Fragment>
     );
 }
